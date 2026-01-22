@@ -1,4 +1,4 @@
-# ■ Smart Factory: Intelligent Defect Analysis & Action Guide System ( 유사 이미지 검색 및 차이점 검출 모델 개발 )
+# ■ 유사 이미지 검색 및 차이점 검출 모델 개발
 
 <br>
 
