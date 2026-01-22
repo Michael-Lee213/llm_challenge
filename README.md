@@ -7,6 +7,7 @@
 
 <br>
 <img width="760" height="283" alt="image" src="https://github.com/user-attachments/assets/14c1edd4-221d-4dc4-b4ab-2881656b1194" />
+<br>
 
 
 ## 2. Key Objectives
@@ -77,5 +78,44 @@
 </table>
 
 <br>
+
+<h3 id="inspection-output-schema">📊 Inspection Output Data Schema</h3>
+
+<table style="width:100%; border-collapse: collapse; border: 1px solid #ddd; font-family: sans-serif;">
+  <thead>
+    <tr style="background-color: #2c3e50; color: white;">
+      <th style="padding: 12px; border: 1px solid #ddd;">데이터 필드</th>
+      <th style="padding: 12px; border: 1px solid #ddd;">데이터 타입</th>
+      <th style="padding: 12px; border: 1px solid #ddd;">샘플 데이터</th>
+      <th style="padding: 12px; border: 1px solid #ddd;">비고</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">defect_type</td>
+      <td style="padding: 10px; border: 1px solid #ddd; text-align: center;">String</td>
+      <td style="padding: 10px; border: 1px solid #ddd; color: #e74c3c;">"Dent (찍힘)"</td>
+      <td style="padding: 10px; border: 1px solid #ddd;">Hybrid 분석으로 분류된 결함 종류</td>
+    </tr>
+    <tr>
+      <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">clock_position</td>
+      <td style="padding: 10px; border: 1px solid #ddd; text-align: center;">String</td>
+      <td style="padding: 10px; border: 1px solid #ddd;">"11시 방향"</td>
+      <td style="padding: 10px; border: 1px solid #ddd;">원형 좌표계 기준 결함 발생 위치</td>
+    </tr>
+    <tr>
+      <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">severity_score</td>
+      <td style="padding: 10px; border: 1px solid #ddd; text-align: center;">Float</td>
+      <td style="padding: 10px; border: 1px solid #ddd;">0.92</td>
+      <td style="padding: 10px; border: 1px solid #ddd;">결함 면적 및 대비 기반 심각도 점수</td>
+    </tr>
+    <tr>
+      <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">bbox_coords</td>
+      <td style="padding: 10px; border: 1px solid #ddd; text-align: center;">List[int]</td>
+      <td style="padding: 10px; border: 1px solid #ddd;">[x, y, w, h]</td>
+      <td style="padding: 10px; border: 1px solid #ddd;">검출 영역 바운딩 박스 좌표</td>
+    </tr>
+  </tbody>
+</table>
 
 
