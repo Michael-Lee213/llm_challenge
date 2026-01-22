@@ -96,5 +96,7 @@
 <br>
 <img width="1006" height="358" alt="image" src="https://github.com/user-attachments/assets/a7b829b1-a36b-4b27-b1bf-1c864d7a64fb" />
 
+※ 결론(Conclusion) : VLM의 거시적 유사도 분석과 CNN/RNN 원리의 미시적 특징 추출을 결합하여, 실제 제조 현장에서 즉시 활용 가능한 고신뢰도 검사 시스템을 구축함.
+
 
 
