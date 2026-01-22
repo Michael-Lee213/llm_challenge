@@ -15,6 +15,7 @@
 3) 지능형 가이드 생성: 검출된 결함의 원인을 분석하고 작업자를 위한 실시간 조치 가이드 생성
 
 <br>
+
 ## 3. Technical Architecture & Strategy
 1) 유사 이미지 검색 (VLM ViT-B-32/openai)
 - Model Selection: CLIP (Contrastive Language-Image Pre-training)
