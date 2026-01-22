@@ -27,4 +27,55 @@
 - 해결 방안 (Innovation - Michael's Logic): VLM의 한계를 극복하기 위해 CNN/RNN/LSTM 응용 로직을 결합한 하이브리드 특징 분석 엔진을 자체 구현하였습니다.
 - 다중 구역 분할 분석 (Region-based Analysis): 전체 이미지를 총 3가지 주요 구역으로 분할하여 구역별 특성에 최적화된 검사 수행.
 - 민감도 제어 시스템: 구역별로 민감도를 다르게 설정하여 외곽부의 미세 찍힘과 중앙부의 구조적 결함을 분리하여 정밀 분석.
-- 특징 추출 최적화: 이미지의 음영 변화와 픽셀 시퀀스의 연속성을 RNN/LSTM 구조로 해석하여, 단순 노이즈가 아닌 실제 물리적 변형(스크래치 등)을 시간적/공간적 흐름으로 파악.<br>
+- 특징 추출 최적화: 이미지의 음영 변화와 픽셀 시퀀스의 연속성을 RNN/LSTM 구조로 해석하여, 단순 노이즈가 아닌 실제 물리적 변형(스크래치 등)을 시간적/공간적 흐름으로 파악.
+
+<br>
+
+## 4. Core Functions & Implementation
+
+<table style="width:100%; border-collapse: collapse;">
+  <thead>
+    <tr style="background-color: #f2f2f2;">
+      <th style="border: 1px solid #dddddd; text-align: left; padding: 12px;">구분</th>
+      <th style="border: 1px solid #dddddd; text-align: left; padding: 12px;">주요 기능</th>
+      <th style="border: 1px solid #dddddd; text-align: left; padding: 12px;">핵심 기술 (Tech Stack)</th>
+      <th style="border: 1px solid #dddddd; text-align: left; padding: 12px;">기술적 구현 상세</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border: 1px solid #dddddd; padding: 10px;"><b>Data Retrieval</b></td>
+      <td style="border: 1px solid #dddddd; padding: 10px;">유사 사례 검색</td>
+      <td style="border: 1px solid #dddddd; padding: 10px;">CLIP, Cosine Similarity</td>
+      <td style="border: 1px solid #dddddd; padding: 10px;">VLM 특징 추출을 통한 과거 불량 이력 및 매뉴얼 매칭</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #dddddd; padding: 10px;"><b>Pre-processing</b></td>
+      <td style="border: 1px solid #dddddd; padding: 10px;">이미지 전처리</td>
+      <td style="border: 1px solid #dddddd; padding: 10px;">CLAHE (OpenCV)</td>
+      <td style="border: 1px solid #dddddd; padding: 10px;">금속 표면 광택 및 조명 편차를 극대화하여 결함 가시성 확보</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #dddddd; padding: 10px;"><b>Object Analysis</b></td>
+      <td style="border: 1px solid #dddddd; padding: 10px;">정밀 마스킹</td>
+      <td style="border: 1px solid #dddddd; padding: 10px;">Erode & Precise Masking</td>
+      <td style="border: 1px solid #dddddd; padding: 10px;">제품 외곽 배경 노이즈 및 중앙 구조물 오검출 영역 원천 차단</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #dddddd; padding: 10px;"><b>Defect Detection</b></td>
+      <td style="border: 1px solid #dddddd; padding: 10px;">차이점 자동 검출</td>
+      <td style="border: 1px solid #dddddd; padding: 10px;">Adaptive Thresholding</td>
+      <td style="border: 1px solid #dddddd; padding: 10px;">주변 픽셀 대비 미세 음영 변화 기반 초고감도 핀셋 검출</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #dddddd; padding: 10px;"><b>Classification</b></td>
+      <td style="border: 1px solid #dddddd; padding: 10px;">지능형 결함 분류</td>
+      <td style="border: 1px solid #dddddd; padding: 10px;">CNN/RNN Hybrid Logic</td>
+      <td style="border: 1px solid #dddddd; padding: 10px;">7x7 그리드 시퀀스 분석을 통해 찍힘(Dent)과 스크래치(Scratch) 구분</td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+
