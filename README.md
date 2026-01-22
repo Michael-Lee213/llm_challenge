@@ -87,13 +87,13 @@
 
 ## 6. Analysis Results & Validation
 
-<계층구조>
+<계층구조><br>
 <img width="522" height="447" alt="image" src="https://github.com/user-attachments/assets/0e64af69-b3cb-4550-bcdc-5059180adf13" />
 <br>
 
-<결과 화면>
+<결과 화면><br>
 <img width="557" height="384" alt="image" src="https://github.com/user-attachments/assets/dc69562e-b017-45a2-940f-c34a4a8f6d8e" />
-
+<br>
 <img width="1006" height="358" alt="image" src="https://github.com/user-attachments/assets/a7b829b1-a36b-4b27-b1bf-1c864d7a64fb" />
 
 
