@@ -92,7 +92,7 @@
 <br>
 
 <결과 화면><br>
-<img width="557" height="384" alt="image" src="https://github.com/user-attachments/assets/dc69562e-b017-45a2-940f-c34a4a8f6d8e" />
+<img width="550" height="346" alt="image" src="https://github.com/user-attachments/assets/504bf96e-0397-4444-9653-be5121a76333" />
 <br>
 <img width="1006" height="358" alt="image" src="https://github.com/user-attachments/assets/a7b829b1-a36b-4b27-b1bf-1c864d7a64fb" />
 
